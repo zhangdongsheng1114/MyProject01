@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.teducn.cn.myproject01.ui.SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/imageView_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp"
+            android:background="#fff"
+            android:onClick="Back"
+            android:src="@mipmap/back" />
+
+        <EditText
+            android:id="@+id/editText_Search"
+            android:layout_width="260dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/textView_sort"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:hint="搜索本地或书城"
+            android:paddingLeft="25dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/editText_Search"
+            android:src="@mipmap/searchh" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="70dp"
+            android:layout_marginTop="7dp"
+            android:src="@mipmap/scanning" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView_Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_Layout"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="30dp"
+        android:text="热门搜索" />
+
+    <GridView
+        android:id="@+id/gridViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_Search"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:horizontalSpacing="20dp"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/item_blank_bg"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton_read"
+            style="@style/bottom_style"
+            android:checked="true"
+            android:drawableTop="@drawable/read_selector"
+            android:text="读书"
+            android:textColor="@color/radiobutton_text_selector" />
+
+        <RadioButton
+            android:id="@+id/radioButton_bookstore"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/bookstore_selector"
+            android:text="书城"
+            android:textColor="@color/radiobutton_text_selector" />
+
+        <RadioButton
+            android:id="@+id/radioButton_find"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/find_selector"
+            android:text="发现"
+            android:textColor="@color/radiobutton_text_selector" />
+
+        <RadioButton
+            android:id="@+id/radioButton_my"
+            style="@style/bottom_style"
+            android:drawableTop="@drawable/my_selector"
+            android:text="我的"
+            android:textColor="@color/radiobutton_text_selector" />
+    </RadioGroup>
+
+</LinearLayout>

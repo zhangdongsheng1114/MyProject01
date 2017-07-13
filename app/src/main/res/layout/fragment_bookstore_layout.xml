@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/editText_Search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/textView_sort"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:hint="搜索本地或书城"
+            android:paddingLeft="25dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/search01" />
+
+        <TextView
+            android:id="@+id/textView_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_Search"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:paddingRight="10dp"
+            android:text="分类"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="7dp"
+            android:src="@mipmap/scanning" />
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabSelectedTextColor="#d21d1d"
+        app:tabTextColor="#020101" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
