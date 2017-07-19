@@ -1,6 +1,7 @@
 package com.teducn.cn.myproject01.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -10,10 +11,8 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-
-import java.util.ArrayList;
-import java.util.List;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.teducn.cn.myproject01.R;
 import com.teducn.cn.myproject01.bookstorefragment.CityFragment;
@@ -25,6 +24,11 @@ import com.teducn.cn.myproject01.bookstorefragment.ListenerFragment;
 import com.teducn.cn.myproject01.bookstorefragment.MagazineFragment;
 import com.teducn.cn.myproject01.bookstorefragment.PublishFragment;
 import com.teducn.cn.myproject01.bookstorefragment.RomanceFragment;
+import com.teducn.cn.myproject01.ui.CategoryActivity;
+import com.teducn.cn.myproject01.ui.SearchActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,14 +38,32 @@ public class BookStoreFragment extends Fragment {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private MyAdapter myAdapter;
+    ImageView imageView_search;
+    TextView textView_category;
 
     public BookStoreFragment() {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bookstore_layout, null);
+        imageView_search = (ImageView) view.findViewById(R.id.imageView_Search);
+        imageView_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+        textView_category = (TextView) view.findViewById(R.id.textView_sort);
+        textView_category.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CategoryActivity.class);
+                startActivity(intent);
+            }
+        });
         tabLayout = (TabLayout) view.findViewById(R.id.tabLayoutId);
         viewPager = (ViewPager) view.findViewById(R.id.viewPagerId);
         myAdapter = new MyAdapter(getFragmentManager());

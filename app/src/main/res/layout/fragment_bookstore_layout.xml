@@ -7,11 +7,11 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp">
 
-        <EditText
-            android:id="@+id/editText_Search"
+        <ImageView
+            android:id="@+id/imageView_Search"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginEnd="15dp"
@@ -20,7 +20,6 @@
             android:layout_toStartOf="@+id/textView_sort"
             android:layout_weight="1"
             android:background="@drawable/shape"
-            android:hint="搜索本地或书城"
             android:paddingLeft="25dp" />
 
         <ImageView
@@ -31,16 +30,11 @@
             android:src="@drawable/search01" />
 
         <TextView
-            android:id="@+id/textView_sort"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/editText_Search"
-            android:layout_alignParentEnd="true"
-            android:clickable="true"
-            android:paddingRight="10dp"
-            android:text="分类"
-            android:textColor="#000000"
-            android:textSize="15sp" />
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:gravity="center"
+            android:text="搜索本地或书城" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -49,6 +43,20 @@
             android:layout_marginEnd="50dp"
             android:layout_marginTop="7dp"
             android:src="@mipmap/scanning" />
+
+        <TextView
+            android:id="@+id/textView_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBaseline="@id/editText_Search"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="分类"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
     </RelativeLayout>
 
     <android.support.design.widget.TabLayout

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -44,85 +44,13 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <LinearLayout
-            android:id="@+id/linearLayout_Id"
+        <GridView
+            android:id="@+id/gridView_books"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="160dp"
-                    android:padding="10dp"
-                    android:src="@drawable/timg" />
-
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="160dp"
-                    android:padding="10dp"
-                    android:src="@drawable/timg01" />
-
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="160dp"
-                    android:padding="10dp"
-                    android:src="@drawable/timg02" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="120dp"
-                    android:layout_height="160dp"
-                    android:padding="10dp"
-                    android:src="@drawable/timg03" />
-
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="160dp"
-                    android:padding="10dp"
-                    android:src="@drawable/timg04" />
-
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="160dp"
-                    android:padding="10dp"
-                    android:src="@drawable/timg05" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="160dp"
-                    android:padding="10dp"
-                    android:src="@drawable/timg06" />
-
-                <ImageView
-                    android:layout_width="120dp"
-                    android:layout_height="160dp"
-                    android:padding="10dp"
-                    android:src="@drawable/timg07" />
-            </LinearLayout>
-        </LinearLayout>
+            android:layout_height="match_parent"
+            android:horizontalSpacing="15dp"
+            android:numColumns="3"
+            android:verticalSpacing="20dp" />
 
         <include
             android:id="@+id/menu_layout"
@@ -130,6 +58,6 @@
             android:layout_width="120dp"
             android:layout_height="160dp"
             android:layout_gravity="right"
-            android:visibility="invisible" />
+            android:visibility="gone" />
     </FrameLayout>
-</ListView>
+</LinearLayout>

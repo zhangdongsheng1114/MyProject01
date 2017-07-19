@@ -17,7 +17,6 @@ import com.teducn.cn.myproject01.entity.Channels;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -31,8 +30,7 @@ public class FindFragment extends Fragment {
 
         // 初始化频道数据
         initChannels();
-        ChannelsAdapter adapter = new ChannelsAdapter(
-                getActivity(), R.layout.channels_item, channels);
+        ChannelsAdapter adapter = new ChannelsAdapter(getActivity(), R.layout.channels_item, channels);
         final ListView listView = (ListView) view.findViewById(R.id.listView_find);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

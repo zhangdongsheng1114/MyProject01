@@ -1,4 +1,4 @@
-package com.teducn.cn.myproject01.ui;
+package com.teducn.cn.myproject01.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

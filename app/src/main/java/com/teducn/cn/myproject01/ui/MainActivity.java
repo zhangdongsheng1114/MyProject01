@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
 
 import com.teducn.cn.myproject01.R;
+import com.teducn.cn.myproject01.adapter.MyFragmentPagerAdapter;
 import com.teducn.cn.myproject01.fragment.BookStoreFragment;
 import com.teducn.cn.myproject01.fragment.FindFragment;
 import com.teducn.cn.myproject01.fragment.MyFragment;
